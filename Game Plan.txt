@@ -1,0 +1,71 @@
+Game Plan
+
+MVP 1
+	Pièce vide avec un personnage qui se promène (et saute)
+	Physique
+	
+MVP 2
+	Ajouter un message d'accueil (à changer plus tard, genre: "Bienvenue dans le jeu" avec un bouton "ok" pour fermer la fenêtre)
+	Ajouter une arme au personnage
+	
+MVP 3
+	Ajuster les graphiques du personnage/arme
+	Ajouter des sons pour l'arme
+	Ajouter sons ambiants ??
+	Basic HUD (mire pour viser, energy level gauge, nombre de balles ou "heating" de l'arme, etc)
+	
+MVP 4
+	Ajouter un ennemi (un rectangle, mettre des graphiques plus tard) avec un energy level et un shield level
+	Gérer les dommages de l'ennemi et la mort de l'ennemi
+	Ajouter un message de réussite (à changer plus tard, genre: "Bravo, vous avez tué l'ennemi" avec un bouton "ok" pour fermer la fenêtre)
+	
+MVP 5
+	Ajuster les graphiques de l'ennemi et les sons
+	Basic HUD pour ennemi (energy level gauge, shield gauge, etc)
+	
+MVP 6
+	Ajouter une arme à l'ennemi
+	Mettre en place que l'ennemi essaie de nous atteindre
+	Gérer la vitesse de déplacement des projectiles
+	Ajouter sons pour l'arme de l'ennemi
+	Gérer les dommages du personnage
+	Gérer la mort du personnage
+	
+MVP 7
+	Gérer les déplacements de l'ennemi (algorithme pour s'approcher du personnage, esquive ?, graphique de déplacement)
+	
+MVP 8 
+	Ajouter un spell (attention de mettre ça générique assez pour que ce soit réutilisable pour les autres armes)
+	Gérer le résultat du spell sur l'ennemi
+	Graphique du spell
+	Sons
+	
+MVP 8 
+	Ajouter les autres spells (attention de mettre ça générique assez pour que ce soit réutilisable pour les autres armes)
+	Gérer les résultats des spells sur l'ennemi
+	Graphique des spells
+	
+MVP 9
+	Améliorer le visuel des attaques de l'ennemi (rond rouge qui grossit et qu'on doit esquiver)
+	Ajouter le concept de roulade/esquive (graphique et son)
+	Ajouter le concept de "break shield"
+	
+MVP 10
+	Améliorer le graphique du premier niveau 
+	Mettre en place la pièce du deuxième niveau avec une porte qui s'ouvre lorsqu’on a réussi le premier niveau
+	Implémenter le "melee weapon" pour le personnage et l'ennemi (graphique, sons, dommages, ...)
+	Ajouter le concept de "stun"
+	
+MVP 11
+	Ajouter une deuxième sorte d'arme ainsi que ses spells et gestion des dommages sur l'ennemi
+	Améliorer l'écran de démarrage du jeu (instructions, histoire, etc)
+	Ajouter un écran d'introduction de niveau (histoire de ce niveau et choix de l'arme)
+	
+MVP 12
+	Sauvegarde lors du succès d'un niveau (il faut sauvegarder où le personnage est rendu et à quelles armes il a accès. Quoi d'autre ???)
+	Améliorer l'écran de réussite du niveau ainsi que le "loot" que ça donne (s’il y a lieu)
+	Au démarrage du jeu: choix entre "new game" et "continue" (auquel cas il faut charger la dernière sauvegarde - lancer le jeu au niveau où il est rendu et avec les armes qu'il possède)
+	
+Suite...
+	Implémenter le niveau 2
+	Implémenter plus d'armes, plus de niveaux, etc.
