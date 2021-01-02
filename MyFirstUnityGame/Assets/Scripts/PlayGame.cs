@@ -32,4 +32,8 @@ public class PlayGame : MonoBehaviour
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
