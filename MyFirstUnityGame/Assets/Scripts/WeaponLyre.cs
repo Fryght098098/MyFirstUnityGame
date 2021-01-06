@@ -8,10 +8,12 @@ public class WeaponLyre : MonoBehaviour
     [SerializeField] private Transform pfBullet;
 
     int ConsecutiveShot = 0;
+    bool CheckedOnce = false;
 
     public int PlayerHealth = 80;
     public float nextShot = 0f;
     public float shotDelay = 2/3f;
+    public float AtkTimeout = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,15 @@ public class WeaponLyre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CheckedOnce == true)
+        {
+            if (Time.time > nextShot + AtkTimeout)
+            {
+                ConsecutiveShot = 0;
+            }
+        }
+ 
+
         if (Time.time > nextShot)
         {
             if (Input.GetButtonDown("Fire1"))
@@ -38,6 +49,7 @@ public class WeaponLyre : MonoBehaviour
                     bullet.GetComponent<LyreBullets>().Setup(shootDirection);*/
                     nextShot = Time.time + shotDelay;
                     ConsecutiveShot++;
+                    CheckedOnce = true;
                 }
                 else
                 {
