@@ -32,6 +32,12 @@ public class WeaponLyre : MonoBehaviour
                 ConsecutiveShot = 0;
             }
         }
+
+        if (ConsecutiveShot == 4)
+        {
+            nextShot += 0.75f;
+            ConsecutiveShot = 0;
+        }
  
 
         if (Time.time > nextShot)
@@ -39,23 +45,16 @@ public class WeaponLyre : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Debug.Log("Consecutive shots " + ConsecutiveShot);
-                if (ConsecutiveShot < 4)
-                {
-                    Debug.Log("FIRE!");
-                    GameObject StartLocation = GameObject.Find("Weapon3");
-                    Transform bullet = Instantiate(pfBullet);
-                    bullet.transform.position = StartLocation.transform.position;
-                    /*Vector3 shootDirection = ( X - Y );
-                    bullet.GetComponent<LyreBullets>().Setup(shootDirection);*/
-                    nextShot = Time.time + shotDelay;
-                    ConsecutiveShot++;
-                    CheckedOnce = true;
-                }
-                else
-                {
-                    nextShot += 0.75f;
-                    ConsecutiveShot = 0;
-                }
+                Debug.Log("FIRE!");
+                GameObject StartLocation = GameObject.Find("Weapon3");
+                Transform bullet = Instantiate(pfBullet);
+                bullet.transform.position = StartLocation.transform.position;
+                /*Vector3 shootDirection = ( X - Y );
+                bullet.GetComponent<LyreBullets>().Setup(shootDirection);*/
+                nextShot = Time.time + shotDelay;
+                ConsecutiveShot++;
+                CheckedOnce = true;
+             
             }
         }
     }           
