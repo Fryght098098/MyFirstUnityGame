@@ -21,6 +21,7 @@ public class PlayerManager : MonoBehaviour
 
     public PlayerHealthBarScript healthBar;
 
+
     public void hit(int damage)
     {
         hp -= damage;
