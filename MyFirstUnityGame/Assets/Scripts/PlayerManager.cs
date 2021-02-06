@@ -17,13 +17,13 @@ public class PlayerManager : MonoBehaviour
     #endregion
 
     public GameObject player;
-    public int hp = 100;
-
+    public int hp;
     public PlayerHealthBarScript healthBar;
 
 
     public void hit(int damage)
     {
+
         hp -= damage;
 
         healthBar.SetHealth(hp);

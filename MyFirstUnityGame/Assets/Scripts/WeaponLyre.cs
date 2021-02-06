@@ -10,16 +10,21 @@ public class WeaponLyre : MonoBehaviour
     int ConsecutiveShot = 0;
     bool CheckedOnce = false;
 
-    public int PlayerHealth = 80;
     public float nextShot = 0f;
     public float shotDelay = 2/3f;
     public float AtkTimeout = 1f;
+    public float ShootForce = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
         GameObject GameManager = GameObject.Find("GameManager");
-        PlayerManager PlayerHealth = GameManager.GetComponent<PlayerManager>();
-        PlayerHealth.hp = 80;
+        PlayerManager PlayerHp = GameManager.GetComponent<PlayerManager>();
+        PlayerHp.hp = 80;
+
+        GameObject Lyre = GameObject.Find("Weapon3");
+        LyreBullets Force = Lyre.GetComponent<LyreBullets>();
+        Force.moveSpeed = ShootForce;
     }
 
     // Update is called once per frame
@@ -30,6 +35,7 @@ public class WeaponLyre : MonoBehaviour
             if (Time.time > nextShot + AtkTimeout)
             {
                 ConsecutiveShot = 0;
+                Debug.Log("Shot rested");
             }
         }
 
@@ -45,12 +51,15 @@ public class WeaponLyre : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Debug.Log("Consecutive shots " + ConsecutiveShot);
-                Debug.Log("FIRE!");
+                //Debug.Log("FIRE!");
                 GameObject StartLocation = GameObject.Find("Weapon3");
                 Transform bullet = Instantiate(pfBullet);
                 bullet.transform.position = StartLocation.transform.position;
-                /*Vector3 shootDirection = ( X - Y );
-                bullet.GetComponent<LyreBullets>().Setup(shootDirection);*/
+                Rigidbody projectile = GetComponent<Rigidbody>();
+                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * ShootForce);
+                /*projectile.velocity = ;
+                Vector3 LyreShootDirection = (X - Y).normalized;
+                bullet.GetComponent<LyreBullets>().Setup(LyreShootDirection);*/
                 nextShot = Time.time + shotDelay;
                 ConsecutiveShot++;
                 CheckedOnce = true;

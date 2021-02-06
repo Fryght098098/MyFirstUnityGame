@@ -6,21 +6,22 @@ public class LyreBullets : MonoBehaviour
 {
     Target EnemyDmg;
     private int bulletDamage = 7;
-    private Vector3 shootDir;
-    public float moveSpeed = 1f;
-    public void Setup(Vector3 shootDirection)
+    private Vector3 LyreShootDir;
+    public float moveSpeed;
+    public void Setup(Vector3 LyreShootDirection)
     {
-        shootDir = shootDirection;
+        LyreShootDir = LyreShootDirection;
         Destroy(gameObject, 10f);
     }
 
     private void Update()
     {
-        transform.position += shootDir * moveSpeed * Time.deltaTime;
+        transform.position += LyreShootDir * moveSpeed * Time.deltaTime;
     }
 
     void OnTriggerEnter(Collider collision)
     {
+        Physics.IgnoreLayerCollision(10, 11, true);
 
         if (collision.gameObject.name == "*** Enemy1 ***")
         {

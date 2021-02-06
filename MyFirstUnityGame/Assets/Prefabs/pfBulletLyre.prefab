@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6624053307903620415}
   - component: {fileID: 8626690046419203818}
   - component: {fileID: 3279102433425596296}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -102,10 +102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7866738396760902629}
+  - component: {fileID: -4633522702707817873}
   - component: {fileID: 8252012630982071204}
   - component: {fileID: 6659939480817778194}
-  - component: {fileID: -4633522702707817873}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pfBulletLyre
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -127,6 +127,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4633522702707817873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426870799728521194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3063ef138524b9343bd808a5c7eea268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
 --- !u!54 &8252012630982071204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,16 +169,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4633522702707817873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8426870799728521194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3063ef138524b9343bd808a5c7eea268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1

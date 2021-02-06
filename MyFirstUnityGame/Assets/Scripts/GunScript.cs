@@ -6,6 +6,12 @@ public class GunScript : MonoBehaviour
     //public float range = 100f;
 
     public Camera fpsCam;
+    public void Start()
+    {
+        GameObject GameManager = GameObject.Find("GameManager");
+        PlayerManager PlayerHealth = GameManager.GetComponent<PlayerManager>();
+        PlayerHealth.hp = 30;
+    }
 
     // Update is called once per frame
     void Update()
