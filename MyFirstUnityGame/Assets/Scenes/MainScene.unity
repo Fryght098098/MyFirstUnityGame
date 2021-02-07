@@ -933,7 +933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   fpsCam: {fileID: 963194227}
-  Health: 30
 --- !u!1 &533687738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,11 +1873,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfBullet: {fileID: 7866738396760902629, guid: 276f3a6a4cbca58439239dbce31ea412,
     type: 3}
-  PlayerHealth: 80
   nextShot: 0
   shotDelay: 0.6666667
   AtkTimeout: 1
-  ShootForce: 1
 --- !u!114 &853688296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,7 +1947,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 1335
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2908,7 +2905,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   fpsCam: {fileID: 963194227}
-  Health: 30
 --- !u!1 &1506936668
 GameObject:
   m_ObjectHideFlags: 0

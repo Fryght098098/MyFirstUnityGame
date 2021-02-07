@@ -10,7 +10,7 @@ public class GunScript : MonoBehaviour
     {
         GameObject GameManager = GameObject.Find("GameManager");
         PlayerManager PlayerHealth = GameManager.GetComponent<PlayerManager>();
-        PlayerHealth.hp = 30;
+        PlayerHealth.SetMaxHealth(30);
     }
 
     // Update is called once per frame

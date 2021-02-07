@@ -6,17 +6,11 @@ public class LyreBullets : MonoBehaviour
 {
     Target EnemyDmg;
     private int bulletDamage = 7;
-    private Vector3 LyreShootDir;
     public float moveSpeed;
-    public void Setup(Vector3 LyreShootDirection)
-    {
-        LyreShootDir = LyreShootDirection;
-        Destroy(gameObject, 10f);
-    }
 
-    private void Update()
+    public void Setup()
     {
-        transform.position += LyreShootDir * moveSpeed * Time.deltaTime;
+        Destroy(gameObject, 10f);
     }
 
     void OnTriggerEnter(Collider collision)

@@ -42,8 +42,9 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    void Start()
+    public void SetMaxHealth(int MaxHp)
     {
-        healthBar.SetMaxHealth(hp);
+        hp = MaxHp;
+        healthBar.SetMaxHealth(MaxHp);
     }
 }
