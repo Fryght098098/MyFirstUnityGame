@@ -16,6 +16,7 @@ public class LyreBullets : MonoBehaviour
     void OnTriggerEnter(Collider collision)
     {
         Physics.IgnoreLayerCollision(10, 11, true);
+        Physics.IgnoreLayerCollision(10, 12, true);
 
         if (collision.gameObject.name == "*** Enemy1 ***")
         {

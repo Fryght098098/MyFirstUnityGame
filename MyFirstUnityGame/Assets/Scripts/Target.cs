@@ -23,7 +23,7 @@ public class Target : MonoBehaviour
     {
         health -= amount;
 
-        
+        Debug.Log("Enemy took " + amount + " damage");
 
         if (health <= 0)
         {

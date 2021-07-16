@@ -26,6 +26,9 @@ public class PlayGame : MonoBehaviour
                     case "ToggleWeaponLyre":
                         WeaponChoice.selectedWeapon = 2;
                         break;
+                    case "ToggleWeaponAcc":
+                        WeaponChoice.selectedWeapon = 3;
+                        break;
                     default:
                         Debug.LogError("Selected weapon is invalid");
                         WeaponChoice.selectedWeapon = 0;
